@@ -66,5 +66,7 @@ public class LinkedList {
 		isLoop.isLoop(list.head);
 		isLoop.deleteLoop(list.head);
 		isLoop.isLoop(list.head);
+		
+		
 	}
 }

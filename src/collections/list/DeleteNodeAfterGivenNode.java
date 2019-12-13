@@ -6,7 +6,6 @@ public class DeleteNodeAfterGivenNode {
 
 	public void deleteNodeAfterNode(Node head, Node afterNode) {
 		Node temp = head;
-
 		while (temp != null && temp.data != afterNode.data) {
 			temp = temp.next;
 		}

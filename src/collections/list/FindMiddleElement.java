@@ -4,7 +4,7 @@ import collections.list.LinkedList.Node;
 
 public class FindMiddleElement {
 
-	public void findMiddleElement(Node head) {
+	public Node findMiddleElement(Node head) {
 		Node slwPtr = head;
 		Node fastPtr = head;
 		while(fastPtr!=null && fastPtr.next!=null) {
@@ -12,5 +12,6 @@ public class FindMiddleElement {
 			slwPtr = slwPtr.next;
 		}
 		System.out.println("middle lement : "+slwPtr.data);
+		return slwPtr;
 	}
 }
