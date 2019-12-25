@@ -70,6 +70,21 @@ public class BinaryTree {
 
 	}
 
+	public int heightOfBinaryTree(Node node) {
+		if (node == null) {
+			return 0;
+		}
+		return 1 + Math.max(heightOfBinaryTree(node.left), heightOfBinaryTree(node.right));
+	}
+
+	public boolean isIdenticalBinaryTree(Node a, Node b) {
+		if (a == null && b == null) {
+			return true;
+		}
+		return (a != null && b != null) && (a.data == b.data) && (isIdenticalBinaryTree(a.left, b.left))
+				&& isIdenticalBinaryTree(a.right, b.right);
+	}
+
 	public static void main(String[] args) {
 		BinaryTree tree = new BinaryTree();
 		tree.root = new Node(10);
@@ -85,6 +100,13 @@ public class BinaryTree {
 		}
 		tree.root = buildBinary(treeData, 0, treeData.size() - 1);
 		System.out.println("After balancing : ");
+		tree.inOrderTravesal(tree.root, true);
+		/*
+		 * 7 / \ 6 8 / \ 5 10
+		 */
+		MirrorImage mi = new MirrorImage();
+		mi.mirror(tree.root);
+		System.out.println("Mirror image : ");
 		tree.inOrderTravesal(tree.root, true);
 	}
 
