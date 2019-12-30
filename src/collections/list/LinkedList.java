@@ -67,6 +67,24 @@ public class LinkedList {
 		isLoop.deleteLoop(list.head);
 		isLoop.isLoop(list.head);
 		
+		System.out.println(" Adding node at middle of list ");
+		list.printList();
+		Node n = new Node(123);
+		AddNodeAtMid atMid = new AddNodeAtMid();
+		atMid.addNode(list.head, n);
+		list.printList();
 		
+		Node nn = new Node(145);
+		atMid.addNode(list.head, nn);
+		list.printList();
+		
+		System.out.println(" Swapping two nodes ");
+		SwapAndSortLinkedList ss = new SwapAndSortLinkedList();
+		ss.swap(list.head, n1, n8);
+		list.printList();
+		
+		System.out.println(" sorting of list ");
+		ss.sort(list.head);
+		list.printList();
 	}
 }
