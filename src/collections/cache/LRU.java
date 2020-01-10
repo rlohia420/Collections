@@ -1,8 +1,6 @@
 package collections.cache;
-
 import java.util.HashMap;
 import java.util.Map;
-
 class Node {
     int key;
     int value;
@@ -44,13 +42,13 @@ class Node {
                 delete(n);
                 addHead(n);
             } else {
-                n = new Node(k, v);
                 if (capacity <= map.size()) {
                     map.remove(end.key);
                     delete(end);
-                    addHead(n);
-                    map.put(k, n);
                 }
+                n = new Node(k, v);
+                map.put(k, n);
+                addHead(n);
             }
         }
 
